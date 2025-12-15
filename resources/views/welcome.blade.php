@@ -27,7 +27,8 @@
       <div class="row">
         <div class="col-md-5 order-md-2">
           <img src="{{url('./asset/images/Sans titre - 2.png')}}" alt="Image" class="img-fluid">
-          <h2 class="font-weight-bolder">Offrez-vous une sensation inedit sur le Fleuve congo</h2>
+         
+          
         </div>
 
         <div class="col-md-7 contents">
@@ -35,7 +36,7 @@
             <div class="col-md-8">
               <div class="mb-4">
               <h3><strong>Reser</strong>vation</h3>
-              <p class="mb-4">Location 150$/par heure</p>
+              <p class="mb-4 font-weight-bolder text-dark">Location 150$/par heure</p>
             </div>
 
             <form  action="{{ route('reservations.store') }}" method="POST">
@@ -43,8 +44,8 @@
              <div class="row gap-2">
 
                 <div class="form-group first col-md-6">
-                  <label for="nom">Nom</label>
-                  <input type="text" class="form-control border rounded px-3" name="nom" id="nom" required>
+                  <label for="nom text-dark">Nom</label>
+                  <input type="text" class="form-control border rounded px-3 " name="nom" id="nom" required>
                 </div>
 
                 <div class="form-group first col-md-6">

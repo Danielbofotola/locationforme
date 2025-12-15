@@ -54,6 +54,8 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->domain(null) // Permet l'accès depuis n'importe quel domaine/IP
+            ->spa(false); // Désactive le mode SPA si nécessaire pour le réseau
     }
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filament\Resources\Reservations\Schemas;
+namespace App\Filament\Resources\ListeReservelocals\Schemas;
 
 use Filament\Schemas\Schema;
 
-class ReservationForm
+class ListeReservelocalInfolist
 {
     public static function configure(Schema $schema): Schema
     {

@@ -35,7 +35,7 @@
           <div class="row justify-content-center">
             <div class="col-md-8">
               <div class="mb-4">
-              <h3><strong>Reser</strong>vation</h3>
+              <h3><strong>Reservations</strong></h3>
               <p class="mb-4 font-weight-bolder text-dark">Location 150$/par heure</p>
             </div>
 

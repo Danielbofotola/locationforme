@@ -2,15 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\ListeReservelocalResource;
 use App\Models\Reservation;
 use Filament\Notifications\Notification;
-
-
+use Illuminate\Http\Request;
 
 class ReservationController extends Controller
 {
-      public function store(Request $request)
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'nom' => 'required|string|max:255',
@@ -23,7 +22,11 @@ class ReservationController extends Controller
             'prix_total' => 'required|numeric|min:0',
         ]);
 
+        // Enregistrement dans la table `reservations`
         $reservation = Reservation::create($validated);
+
+        // Enregistrement dans la table `liste_reservelocal_resources`
+        ListeReservelocalResource::create($validated);
 
         // 🔔 Notification Filament
         Notification::make()

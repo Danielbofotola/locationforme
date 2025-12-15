@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservationController;
 
 Route::get('/', function () {
+    // La vue "index" n'existe pas, on utilise la vue "welcome" fournie par Laravel
     return view('welcome');
 });
 

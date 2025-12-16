@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 use Filament\Panel;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -45,9 +46,14 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-}
 
-// public function canAccessPanel(Panel $panel): bool
-//     {
-//         return true;
-//     }
+    /**
+     * Autorise l'utilisateur à accéder au panel Filament "admin".
+     */
+    public function canAccessPanel(Panel $panel): bool
+    {
+        return $panel->getId() === 'admin';
+        // Si tu veux restreindre à certains emails, tu peux faire par ex. :
+        // return $panel->getId() === 'admin' && $this->email === 'admin@example.com';
+    }
+}
